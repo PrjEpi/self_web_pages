@@ -1,0 +1,141 @@
+.img_body {
+    background-image: url(../imgs/page_bg.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #272727;
+    
+}
+
+.root_div {
+    margin-top: 200px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.top_nav_ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.top_nav_ul li {
+    float: right;
+    padding: 36px;
+}
+
+.top_nav_ul li a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: Didot;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: -0.69px;
+}
+
+.top_nav_ul li a:hover {
+    color: rgb(104, 104, 104);
+}
+
+button {
+    background-color: red;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    border-radius: 20px;
+}
+
+h1 {
+    font-family: Didot;
+    font-size: 50px;
+    letter-spacing: -0.48px;
+    color: #ffffff;
+    text-align: center;
+}
+
+h2 {
+    font-family: Didot-Bold;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: -0.83px;
+}
+
+p {
+    font-family: DroidSans;
+    font-size: 18px;
+    letter-spacing: -0.48px;
+    color: #7D8398;
+    text-align: center;
+}
+
+p1 {
+    font-family: DroidSans-Bold;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: -0.62px;
+}
+
+.side_nav_ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.side_nav_ul li {
+    color: white;
+    margin-top: 50px;
+}
+
+.side_nav_ul li img {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.side_nav_ul li:hover {
+    cursor: pointer;
+}
+
+.side_nav_ul li p {
+    margin-left:20px;
+    display:inline-block;
+}
+
+.side_nav_ul li:hover p {
+    color: white;
+}
+
+.side_nav_ul li:end p {
+    color: #7D8398;
+}
+
+.tec_div {
+    display: flex;
+    justify-content:space-around;
+    margin-top: 200px;
+}
+
+.tec_div div {
+    margin-left: 3%;
+}
+
+.frame_div {
+    margin-left: 10%;
+}
+
+.frame_div iframe {
+    width: 1500px;
+    height: 800px;
+    border: none;
+}
