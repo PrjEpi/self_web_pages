@@ -1,0 +1,517 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.body {
+  display: none;
+  background: url("assets/imgs/bg.png") no-repeat;
+  background-size: cover;
+}
+.body .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 40px 300px;
+  box-sizing: border-box;
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0));
+  background-size: cover;
+  text-align: center;
+}
+@media (max-width: 1440px) {
+  .body .header {
+    padding: 40px 100px;
+  }
+}
+.body .header .nav {
+  flex: 1;
+  text-align: right;
+}
+.body .header .nav .item {
+  display: inline-block;
+  margin-left: 100px;
+  font-size: 20px;
+  color: #FFFFFF;
+  letter-spacing: -0.69px;
+  cursor: pointer;
+  padding: 10px 0;
+}
+.body .header .nav .item.active {
+  position: relative;
+}
+.body .header .nav .item.active::before {
+  content: " ";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #FFFFFF;
+}
+.body .header .line {
+  height: 2px;
+  width: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-right: 13px;
+}
+.body .header .login {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+.body .content {
+  position: relative;
+}
+.body .content .nav {
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  z-index: 12;
+  width: 100px;
+  height: 600px;
+  margin-top: -300px;
+}
+.body .content .nav ul {
+  z-index: 999;
+  position: relative;
+  left: 345px;
+  height: 240px;
+  top: 180px;
+  list-style: none;
+}
+@media (max-width: 1440px) {
+  .body .content .nav ul {
+    left: 145px;
+  }
+}
+.body .content .nav ul li {
+  height: 40px;
+  position: relative;
+  white-space: nowrap;
+}
+.body .content .nav ul li i {
+  width: 80px;
+  height: 44px;
+  display: block;
+  font-size: 15px;
+  color: #a6a6aa;
+  font-style: normal;
+  display: inline;
+}
+.body .content .nav ul li i:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-radius: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  border: 3px solid #fff;
+  transition: left .3s, top .3s, width .3s, height .3s;
+  position: absolute;
+  left: -21px;
+  top: 8px;
+}
+.body .content .nav ul li.active i {
+  color: #fff;
+}
+.body .content .nav ul li.active i:before {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  left: -27px;
+  top: 2px;
+}
+.body .content .nav ul li span {
+  font-size: 12px;
+  color: #a6a6aa;
+  position: absolute;
+  width: 100px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity .3s, transform .3s, color .3s;
+  text-transform: uppercase;
+  top: 3px;
+}
+.body .content .nav ul li span:hover {
+  color: #fff;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.body .content .nav ul li:nth-of-type(1) span {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.body .content .nav ul li:nth-of-type(2) span {
+  -webkit-transition-delay: .02s;
+  transition-delay: 0.02s;
+}
+.body .content .nav ul li:nth-of-type(3) span {
+  -webkit-transition-delay: .04s;
+  transition-delay: 0.04s;
+}
+.body .content .nav ul li:nth-of-type(4) span {
+  -webkit-transition-delay: .06s;
+  transition-delay: 0.06s;
+}
+.body .content .nav ul li:nth-of-type(5) span {
+  -webkit-transition-delay: .08s;
+  transition-delay: 0.08s;
+}
+.body .content .nav ul li:nth-of-type(6) span {
+  -webkit-transition-delay: .1s;
+  transition-delay: 0.1s;
+}
+.body .content .nav:hover ul li span {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+}
+.body .content .nav ul li.active span {
+  color: #fff;
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+}
+.body .content .menu {
+  position: fixed;
+  left: 30px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.body .content .section .fp-tableCell {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 100px 300px 0 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 1440px) {
+  .body .content .section .fp-tableCell {
+    padding: 30px 100px 0 100px;
+  }
+}
+.body .content .s0 .fp-tableCell {
+  align-items: center;
+}
+.body .content .s0 .fp-tableCell .title {
+  display: inline-block;
+  width: 895px;
+  text-align: center;
+  font-family: Didot-Bold;
+  font-size: 50px;
+  color: #FFFFFF;
+  letter-spacing: -1.73px;
+}
+.body .content .s0 .fp-tableCell .desc {
+  display: inline-block;
+  width: 895px;
+  margin-top: 42px;
+  font-family: DroidSans;
+  font-size: 18px;
+  color: #7D8398;
+  letter-spacing: -0.62px;
+  text-align: center;
+}
+.body .content .s0 .fp-tableCell .download_btn {
+  display: inline-block;
+  margin-top: 86px;
+  background: #FF4444;
+  border-radius: 72px;
+  font-family: DroidSans;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: -0.62px;
+  width: 259px;
+  padding: 10px;
+  text-align: center;
+}
+.body .content .s1 .fp-tableCell > div {
+  display: inline-block;
+  width: 791px;
+  text-align: left;
+}
+.body .content .s1 .fp-tableCell .title {
+  font-family: Didot-Bold;
+  font-size: 50px;
+  color: #FFFFFF;
+  letter-spacing: -1.73px;
+}
+.body .content .s1 .fp-tableCell .desc {
+  display: flex;
+  margin-top: 80px;
+}
+.body .content .s1 .fp-tableCell .desc .line {
+  opacity: 0.2;
+  height: 2px;
+  background: #FFFFFF;
+  width: 60px;
+  min-width: 60px;
+  margin-right: 36px;
+  position: relative;
+  top: 13px;
+}
+.body .content .s1 .fp-tableCell .desc .text1,
+.body .content .s1 .fp-tableCell .desc .text2 {
+  width: 643px;
+  display: inline-block;
+}
+.body .content .s1 .fp-tableCell .desc .text1 {
+  font-family: Didot-Bold;
+  font-size: 24px;
+  color: #FFFFFF;
+  letter-spacing: -0.83px;
+}
+.body .content .s1 .fp-tableCell .desc .text2 {
+  font-family: DroidSans;
+  font-size: 18px;
+  color: #7D8398;
+  letter-spacing: -0.62px;
+  margin-top: 16px;
+}
+.body .content .s2 .fp-tableCell > div,
+.body .content .s3 .fp-tableCell > div {
+  width: 716px;
+  text-align: left;
+}
+.body .content .s2 .fp-tableCell .title,
+.body .content .s3 .fp-tableCell .title {
+  font-family: Didot-Bold;
+  font-size: 50px;
+  color: #FFFFFF;
+  letter-spacing: -1.73px;
+  margin-bottom: 40px;
+}
+.body .content .s2 .fp-tableCell .desc,
+.body .content .s3 .fp-tableCell .desc {
+  margin-top: 35px;
+  display: flex;
+}
+.body .content .s2 .fp-tableCell .desc .line,
+.body .content .s3 .fp-tableCell .desc .line {
+  opacity: 0.2;
+  height: 2px;
+  background: #FFFFFF;
+  width: 60px;
+  min-width: 60px;
+  margin-right: 32px;
+  position: relative;
+  top: 13px;
+}
+.body .content .s2 .fp-tableCell .desc .text,
+.body .content .s3 .fp-tableCell .desc .text {
+  font-family: Didot-Bold;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: -0.83px;
+}
+.body .content .s4 .fp-tableCell > .title {
+  font-family: Didot-Bold;
+  font-size: 50px;
+  color: #FFFFFF;
+  letter-spacing: -1.73px;
+  display: inline-block;
+  width: 840px;
+}
+.body .content .s4 .fp-tableCell .info {
+  margin-top: 40px;
+  width: 840px;
+  display: flex;
+}
+.body .content .s4 .fp-tableCell .info .line {
+  opacity: 0.2;
+  height: 2px;
+  background: #FFFFFF;
+  width: 60px;
+  min-width: 60px;
+  margin-right: 38px;
+  position: relative;
+  top: 53px;
+}
+.body .content .s4 .fp-tableCell .info .items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.body .content .s4 .fp-tableCell .info .items .item {
+  margin-top: 40px;
+}
+.body .content .s4 .fp-tableCell .info .items .item .title {
+  font-family: DroidSans-Bold;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: -0.62px;
+}
+.body .content .s4 .fp-tableCell .info .items .item .desc {
+  margin-top: 16px;
+  font-family: DroidSans;
+  font-size: 18px;
+  color: #7D8398;
+  letter-spacing: -0.62px;
+}
+.body .content .s5 .fp-tableCell {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.body .content .s5 .fp-tableCell .left,
+.body .content .s5 .fp-tableCell .right {
+  display: inline-block;
+  width: 400px;
+  height: 495px;
+}
+.body .content .s5 .fp-tableCell .left .title,
+.body .content .s5 .fp-tableCell .right .title {
+  font-family: Didot-Bold;
+  font-size: 50px;
+  color: #FFFFFF;
+  letter-spacing: -1.73px;
+}
+.body .content .s5 .fp-tableCell .left .desc,
+.body .content .s5 .fp-tableCell .right .desc {
+  margin-top: 60px;
+  font-family: DroidSans-Bold;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: -0.62px;
+}
+.body .content .s5 .fp-tableCell .left .list,
+.body .content .s5 .fp-tableCell .right .list {
+  margin-top: 8px;
+}
+.body .content .s5 .fp-tableCell .left .list .item,
+.body .content .s5 .fp-tableCell .right .list .item {
+  margin-top: 24px;
+  display: flex;
+}
+.body .content .s5 .fp-tableCell .left .list .item div,
+.body .content .s5 .fp-tableCell .right .list .item div {
+  font-family: DroidSans;
+  font-size: 18px;
+  color: #7D8398;
+  letter-spacing: -0.62px;
+  display: flex;
+}
+.body .content .s5 .fp-tableCell .left .list .item div:first-child,
+.body .content .s5 .fp-tableCell .right .list .item div:first-child {
+  margin-right: 16px;
+}
+.body .content .s6 .fp-tableCell .wrapper .list {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.body .content .s6 .fp-tableCell .wrapper .list::after {
+  position: absolute;
+  top: 285px;
+  opacity: 0.2;
+  background: #FFFFFF;
+  height: 2px;
+  width: 100%;
+}
+.body .content .s6 .fp-tableCell .wrapper .list .item {
+  min-width: 300px;
+  height: 237px;
+  min-height: 237px;
+  width: 300px;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0;
+}
+.body .content .s6 .fp-tableCell .wrapper .list .item .title {
+  text-align: center;
+  font-family: DroidSans-Bold;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: -0.62px;
+  margin-top: 10px;
+}
+.body .content .s6 .fp-tableCell .wrapper .list .item img {
+  width: 90%;
+}
+.body .content .s6 .fp-tableCell .wrapper .list .item .desc,
+.body .content .s6 .fp-tableCell .wrapper .list .item .desc div {
+  display: inline-block;
+  text-align: center;
+  width: 270px;
+  font-family: DroidSans;
+  font-size: 13px;
+  color: #7D8398;
+  letter-spacing: -0.62px;
+}
+.body .content .s7 .fp-tableCell,
+.body .content .s8 .fp-tableCell {
+  padding-top: 120px;
+}
+.body .content .s7 .fp-tableCell .wrapper .title,
+.body .content .s8 .fp-tableCell .wrapper .title {
+  font-family: Didot-Bold;
+  font-size: 50px;
+  color: #FFFFFF;
+  letter-spacing: -1.73px;
+  text-align: center;
+}
+.body .content .s7 .fp-tableCell .wrapper .items,
+.body .content .s8 .fp-tableCell .wrapper .items {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.body .content .s7 .fp-tableCell .wrapper .items .item,
+.body .content .s8 .fp-tableCell .wrapper .items .item {
+  margin-top: 40px;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+.body .content .s7 .fp-tableCell .wrapper .items .item img,
+.body .content .s8 .fp-tableCell .wrapper .items .item img {
+  width: 110px;
+}
+.body .content .s7 .fp-tableCell .wrapper .items .item .type,
+.body .content .s8 .fp-tableCell .wrapper .items .item .type {
+  margin-top: 17px;
+  font-family: DroidSans;
+  font-size: 14px;
+  color: #7D8398;
+  letter-spacing: -0.62px;
+}
+.body .content .s7 .fp-tableCell .wrapper .items .item .name,
+.body .content .s8 .fp-tableCell .wrapper .items .item .name {
+  margin-top: 8px;
+  font-family: DroidSans-Bold;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: -0.62px;
+}
+.body .content .s7 .fp-tableCell .wrapper .items .item .name img,
+.body .content .s8 .fp-tableCell .wrapper .items .item .name img {
+  width: 15px;
+  position: relative;
+  top: 3px;
+  margin-left: 5px;
+}
+.body .content .s7 .fp-tableCell .wrapper .items .item .desc,
+.body .content .s8 .fp-tableCell .wrapper .items .item .desc {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: DroidSans;
+  font-size: 13px;
+  color: #7D8398;
+  letter-spacing: -0.48px;
+}
